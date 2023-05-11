@@ -26,8 +26,6 @@ addButtonEl.addEventListener("click", function() {
     if (inputFieldEl.value) {
         let inputValue = inputFieldEl.value
         
-        kittyImg.src = "https://drive.google.com/uc?export=view&id=1MG3slK0Sbz-jt-nfRJw31sggTdpvM5gx"
-    
         push(shoppingListInDB, inputValue)
     
         clearInputFieldEl()
@@ -38,6 +36,8 @@ addButtonEl.addEventListener("click", function() {
 onValue(shoppingListInDB, function(snapshot) {
     if (snapshot.exists()) {
         let itemsArray = Object.entries(snapshot.val())
+        
+        kittyImg.src = "https://drive.google.com/uc?export=view&id=1MG3slK0Sbz-jt-nfRJw31sggTdpvM5gx"
         
         clearShoppingListEl()
         
