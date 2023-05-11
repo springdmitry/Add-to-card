@@ -37,7 +37,7 @@ onValue(shoppingListInDB, function(snapshot) {
     if (snapshot.exists()) {
         let itemsArray = Object.entries(snapshot.val())
         
-        kittyImg.src = "assets/cat.png"
+        kittyImg.src = "../assets/cat.png"
         
         clearShoppingListEl()
         
