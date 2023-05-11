@@ -26,7 +26,7 @@ addButtonEl.addEventListener("click", function() {
     if (inputFieldEl.value) {
         let inputValue = inputFieldEl.value
         
-        kittyImg.src = "https://i.pinimg.com/736x/aa/c8/29/aac829889e740dbeece2cf04649f2a46.jpg"
+        kittyImg.src = "cat.png"
     
         push(shoppingListInDB, inputValue)
     
