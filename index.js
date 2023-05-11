@@ -12,7 +12,7 @@ const shoppingListInDB = ref(database, "shoppingList")
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
-const kittyImg = document.getElementById("kity-img")
+const kittyImg = document.getElementById("kity-img").src = "assets/cat.png"
 
 inputFieldEl.addEventListener("keypress", function() {
     if (event.key === "Enter") {
