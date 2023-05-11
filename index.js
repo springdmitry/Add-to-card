@@ -13,6 +13,7 @@ const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
 const kittyImg = document.getElementById("kity-img")
+kittyImg.src = "assets/cat.png"
 
 inputFieldEl.addEventListener("keypress", function() {
     if (event.key === "Enter") {
@@ -37,7 +38,7 @@ onValue(shoppingListInDB, function(snapshot) {
     if (snapshot.exists()) {
         let itemsArray = Object.entries(snapshot.val())
         
-        kittyImg.src = "../assets/cat.png"
+        kittyImg.src = "assets/cat.png"
         
         clearShoppingListEl()
         
