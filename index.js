@@ -14,6 +14,8 @@ const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
 let kittyImg = document.getElementById("kity-img")
 
+const clickedEl = []
+
 inputFieldEl.addEventListener("keypress", function() {
     if (event.key === "Enter") {
         event.preventDefault()
@@ -67,6 +69,11 @@ function appendItemToShoppingListEl(item) {
     let itemValue = item[1]
     
     let newEl = document.createElement("li")
+    newEl.setAttribute("id", itemID)
+
+    if (clickedEl.includes(newEl.id)) {
+        newEl.setAttribute("class", "clicked")    
+    }
     
     newEl.textContent = itemValue
     
@@ -78,3 +85,17 @@ function appendItemToShoppingListEl(item) {
     
     shoppingListEl.append(newEl)
 }
+
+shoppingListEl.addEventListener("click", function(e){
+    
+    if (!clickedEl.includes(e.target.id)) {
+        clickedEl.push(e.target.id)
+    } else {
+        const index = clickedEl.indexOf(e.target.id)
+        if (index != -1) {
+            clickedEl.splice(index, 1)
+        }
+    }
+    
+    document.getElementById(`${e.target.id}`).classList.toggle("clicked")
+})
