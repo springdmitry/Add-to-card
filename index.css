@@ -71,3 +71,9 @@ ul li:hover {
     background-color: #FFECC7;
     cursor: pointer;
 }
+
+.clicked {
+    background-color: #FFECC7;
+    text-decoration: line-through;
+    color:  #100C08;
+}
