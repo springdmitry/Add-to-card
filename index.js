@@ -16,7 +16,7 @@ let kittyImg = document.getElementById("kity-img")
 
 const clickedEl = []
 
-inputFieldEl.addEventListener("keypress", function() {
+inputFieldEl.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         event.preventDefault()
         addButtonEl.click()    
@@ -39,7 +39,7 @@ onValue(shoppingListInDB, function(snapshot) {
     if (snapshot.exists()) {
         let itemsArray = Object.entries(snapshot.val())
         
-        kittyImg.src = "https://drive.google.com/uc?export=view&id=1MG3slK0Sbz-jt-nfRJw31sggTdpvM5gx"
+        kittyImg.src = "assets/cat.png"
         
         clearShoppingListEl()
         
